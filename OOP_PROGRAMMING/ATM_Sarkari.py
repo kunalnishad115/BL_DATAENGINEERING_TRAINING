@@ -3,14 +3,13 @@ class Exception_ATM(Exception):
         print(msg)
 
 
-
-
-
 class ATM:
     def __init__(self):
         self.balance = 0
         self.pin = ""
+        print(id(self))
         self.menu()
+        
 
     def menu(self):
         user_input = input("""
@@ -73,9 +72,17 @@ Please choose an option:
 
 try:
     obj = ATM()
+    print(id(obj))
+    
 except Exception_ATM as e:
     print("An error occurred. Please try again.")
 else:
     print("Thank you for using the ATM.")
 finally:
     print("Done By Kunal")
+
+# obj=ATM()
+# print(id(obj))
+
+
+    
