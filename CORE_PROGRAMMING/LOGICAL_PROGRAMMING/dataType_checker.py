@@ -1,4 +1,3 @@
-
 def my_decorator(data_type):
   def outer_wrapper(func):
     def inner_wrapper(*args):

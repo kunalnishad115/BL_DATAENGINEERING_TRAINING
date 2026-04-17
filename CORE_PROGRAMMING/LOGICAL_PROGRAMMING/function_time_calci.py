@@ -1,12 +1,5 @@
 import time
 
-
-# def min_time_calci(t1,t2,t3):
-#   print(f"The minimum execution time is: {min(t1,t2,t3)}")
-
-# def max_time_calci(t1,t2,t3):
-#   print(f"The maximum execution time is: {max(t1,t2,t3)}")
-
 def time_calculator(func):
   def wrapper(*args):
     start_time=time.time()
@@ -14,6 +7,7 @@ def time_calculator(func):
     end_time=time.time()
     print(f"Ececution time: {func.__name__} " ,end_time-start_time,"seconds")
   return wrapper
+
 
 @time_calculator
 def saying_hello():
