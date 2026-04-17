@@ -41,11 +41,11 @@ ans_data={
 }
 
 for student in dummy_data:
-  if student["marks"]>85:
+  if student["marks"]>=85:
     ans_data[student["name"]]="A"
-  elif student["marks"]>70:
+  elif student["marks"]>=70:
     ans_data[student["name"]]="B"
-  elif student["marks"]>50:
+  elif student["marks"]>=50:
     ans_data[student["name"]]="C"
   else:
     ans_data[student["name"]]="Fail"

@@ -8,9 +8,9 @@ import time
 #   print(f"The maximum execution time is: {max(t1,t2,t3)}")
 
 def time_calculator(func):
-  def wrapper():
+  def wrapper(*args):
     start_time=time.time()
-    func()
+    func(*args)
     end_time=time.time()
     print(f"Ececution time: {func.__name__} " ,end_time-start_time,"seconds")
   return wrapper
