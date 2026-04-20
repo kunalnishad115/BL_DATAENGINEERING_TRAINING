@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Kunal",
+        "phone": "987543568",
+        "email": "Rohit@gmail.com",
+        "city": "pune"
+    },
+    {
+        "name": "Kunal Nishad",
+        "phone": "9621088078",
+        "email": "kunal.Nishad@gmail.com",
+        "city": "Haryana"
+    },
+    {
+        "name": "Kanchan",
+        "phone": "782346782",
+        "email": "k.Hyy@gmail.com",
+        "city": "Mumbai"
+    }
+]
