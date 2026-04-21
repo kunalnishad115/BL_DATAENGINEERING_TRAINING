@@ -90,16 +90,17 @@ class AddressBook:
 
     
 
-user=Person('Kanchan','782346782','k.Hyy@gmail.com','Mumbai')
+# user=Person('Kanchan','782346782','k.Hyy@gmail.com','Mumbai')
+user_1=Person('Karan','782349089','karan.Hyy@gmail.com','Pune')
 obj = AddressBook()
 
 obj.load_json()   
 
-# obj.del_person("rohit")
-obj.user_search('kunal nishad')
+# obj.user_update("karan")
+# obj.user_search('kunal nishad')
 
 
-# obj.add_person(user)
+# obj.add_person(user_1)
 
 obj.save_json()   
 
