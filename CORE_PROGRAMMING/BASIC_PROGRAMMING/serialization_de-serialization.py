@@ -2,7 +2,7 @@ import json as j
 ## serialize the list and dic into the json 
 dummy_data=[
   {"name":"kunal","age":21,"city":"faridabad","domain":"data engineering"},
-  {"name":"Rahul","age":21,"city":"Mathura","domain":"Java Developer"},
+  {"name":"Naman","age":21,"city":"Mathura","domain":"Java Developer"},
   {"name":"Aman","age":22,"city":"delhi","domain":"ui ux designer"},
   {"name":"Priya","age":26,"city":"kolkata","domain":"buisness analyst"},
   {"name":"Rohit","age":24,"city":"mumbai","domain":"data scientist"}
