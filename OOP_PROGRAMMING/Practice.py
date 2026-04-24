@@ -37,7 +37,7 @@ class Product(ABC):
 
 class Book(Product):
   def getFinalPrice(self):
-    return self._price*0.90
+    return self._price*0.90 ## 1-10/100
   
 class Electronics(Product):
   def getFinalPrice(self):
