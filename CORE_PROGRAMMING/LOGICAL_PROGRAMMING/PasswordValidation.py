@@ -7,7 +7,5 @@ def is_valid(user_input):
   else:
     print("Invalid Pass")
 
-
-
 user_input=input("Enter Your Pass: ")
 is_valid(user_input)
