@@ -13,3 +13,6 @@ def cook_food_test():
   yield
   print("Teardown: Gas Off and utils are Cleaned")
 
+@p.fixture(params=[90,99,23,156,26,87])
+def validation_nums(request):
+  return request.param

@@ -1,30 +1,30 @@
-# import pytest as p
-# from app import add,sub,divison
+import pytest as p
+from app import add,sub,divison
 
-# def test_greet():
-#   print("hello world")
+def test_greet():
+  print("hello world")
 
-# @p.mark.smoke
-# def test_add():
-#   assert add(2,3)==5
+@p.mark.smoke
+def test_add():
+  assert add(2,3)==5
 
-# @p.mark.smoke
-# def test_add1():
-#     assert add(1, 2) == 3
+@p.mark.smoke
+def test_add1():
+    assert add(1, 2) == 3
 
-# def test_add2():
-#     assert add(-1, 1) == 0
+def test_add2():
+    assert add(-1, 1) == 0
 
-# def test_add3():
-#     assert add(100, 200) == 300
+def test_add3():
+    assert add(100, 200) == 300
 
-# @p.mark.smoke
-# def test_div():
-#    with p.raises(ZeroDivisionError):
-#       divison(23,0)
+@p.mark.smoke
+def test_div():
+   with p.raises(ZeroDivisionError):
+      divison(23,0)
 
-# def test_sub():
-#   assert sub(5,5)==0
+def test_sub():
+  assert sub(5,5)==0
 
 
 def test_valid_name(login_crendentials):
@@ -37,5 +37,13 @@ def test_cook_food_or_not(cook_food_test):
   print("Testing: Food Is Cooking")
   assert True
 
+def test_even_check(validation_nums ):
+  assert validation_nums%2==0
 
+def test_odd_check(validation_nums):
+  assert validation_nums%2 !=0 
+
+@p.mark.parametrize("a,b,final",[(1,2,3),(2,7,9),(10,10,21)])
+def test_checker(a,b,final):
+  assert a+b==final
 
