@@ -6,3 +6,4 @@ def sigmoid_fun_calci(array):
 array=np.array([1,2,3,4,5,10,24,89])
 
 print(sigmoid_fun_calci(array))
+
