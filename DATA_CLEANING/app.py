@@ -20,7 +20,7 @@ print(pd.isna(student).sum())
 print(student.dropna())
 
 ## filling missing values
-student.loc[student['names'].isnull(), 'names'] = ['karan', 'kirti']
+student.loc[student['names'].isnull(), 'names'] = ['ram', 'kirti']
 
 print(student)
 
