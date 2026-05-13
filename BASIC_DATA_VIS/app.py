@@ -9,3 +9,4 @@ y=x*10
 plt.plot(x,y)
 plt.show()
 print('hello')
+print('hello world')
