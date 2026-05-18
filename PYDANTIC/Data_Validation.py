@@ -1,8 +1,8 @@
 from pydantic import BaseModel,EmailStr,Field
-from typing import List,Dict,Optional
+from typing import List,Dict,Optional,Annotated
 
 class Validator(BaseModel):
-  name:str
+  name:Annotated[str,Field(title='Enter Your Name plz..',strict=True)]
   age:Optional[int]=Field(gt=0,lt=120)
   email:List[EmailStr]
   address:Dict[str,str]
