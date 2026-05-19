@@ -2,16 +2,17 @@ from fastapi import FastAPI,status,HTTPException,Query
 import json
 from pydantic import BaseModel, Field, computed_field
 from typing import Annotated, Literal, Optional
+from fastapi.responses import JSONResponse
 app=FastAPI()
 
 ##MOdel Creation
 
 class Patient(BaseModel): ## Request Body....
-  id:Annotated[str,Field(..., description='Id of The patient', examples='P001')]
+  id:Annotated[str,Field(..., description='Id of The patient', examples=['P001'])]
   name:Annotated[str,Field(..., description='Name of the patient')]
   city:Annotated[str,Field(..., description='City of the patient')]
   age:Annotated[int , Field(..., gt=0,lt=150,description='Age of the Patient')]
-  gender:Annotated[Literal['male','Female','other'],Field(..., description='Gender Of the patient')]
+  gender:Annotated[Literal['male','female','other'],Field(..., description='Gender Of the patient')]
   height:Annotated[float, Field(..., gt=0,description='Height of The patient')]
   weight:Annotated[float, Field(..., gt=0,description='weight of the patient')]
 
@@ -30,19 +31,19 @@ class Patient(BaseModel): ## Request Body....
     elif self.bmi < 25:
       return 'Normal'
     elif self.bmi < 30:
-      return 'Normal'
+      return 'Overweight'
     else:
       return 'Obese'
     
-
-
-
-
 
 def load_data():
   with open('patients.json','r') as f:
     data=json.load(f)
   return data
+
+def save_data(data):
+  with open('patients.json','w') as f:
+    json.dump(data,f)
 
 @app.get('/',status_code=status.HTTP_200_OK)
 def home_page():
@@ -79,6 +80,23 @@ def sort_vals(sort_by:str=Query(...,description='sort the values'),order:str=Que
 
   return sorted_data
 
+
+@app.post('/create')
+def create_patient(p:Patient):
+  ## load data
+  data=load_data()
+  ## validate it is unique
+  if p.id in data:
+    raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail='User Already Exist')
+  ## if not then save User
+
+  data[p.id]=p.model_dump(exclude=['id'])
+
+  ## save into DB/Json
+
+  save_data(data)
+  return JSONResponse(status_code=status.HTTP_201_CREATED,content={'msg':'created...'})
+  
 
 
 
