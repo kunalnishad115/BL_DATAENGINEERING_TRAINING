@@ -4,7 +4,7 @@ from typing import Annotated
 class Validator(BaseModel):
   name:Annotated[str,Field(strict=True)]
   age:Annotated[int,Field(gt=0,lt=110,strict=True)]
-  email:str
+  email:Annotated[str,EmailStr]
 
   @field_validator('email')
   @classmethod
@@ -19,6 +19,8 @@ def print_dash(vlt:Validator):
   print(vlt.name)
   print(vlt.email)
   print(vlt.age)
+
+
 
 data={
   'name':'kunal',
