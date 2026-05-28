@@ -8,3 +8,7 @@ SELECT dept, SUM(salary)
 FROM employees
 GROUP BY dept;
 
+SELECT dept, COUNT(*)
+FROM employees
+GROUP BY dept;
+
