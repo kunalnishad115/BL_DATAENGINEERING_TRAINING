@@ -1,0 +1,49 @@
+FLOW: 
+
+patients
+ ↓
+appointments ← doctors
+ ↓
+prescriptions
+ ↓
+medical_reports
+
+patients
+ ↓
+user_engagement
+ ↓
+engagement_summary
+
+
+
+Entity's : 
+
+1. patients 
+
+2. doctors 
+
+3. appointments 
+
+4. prescriptions 
+
+5. user_engagement 
+
+6. engagement_summary 
+
+7. medical_reports
+
+
+
+Attributes : Shows in Image Properly 
+
+Relationships :
+
+1. patients ↔ appointments  : One-to-Many
+2. doctors ↔ appointments : One-to-Many
+3. appointments ↔ prescriptions : One-to-Many 
+4. patients ↔ prescriptions : One-to-Many
+5. doctors ↔ prescriptions : One-to-Many
+6. patients ↔ user_engagement : One-to-Many 
+7. patients ↔ engagement_summary : One-to-One
+8. patients ↔ medical_reports : One-to-Many
+9. doctors ↔ medical_reports : One-to-Many
