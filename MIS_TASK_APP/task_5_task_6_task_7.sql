@@ -22,3 +22,13 @@ VALUES
 (7, 2, 20, CURRENT_TIMESTAMP, 'Laptop'),
 (10, 8, 50, CURRENT_TIMESTAMP, 'Tablet');
 
+GRANT SELECT
+ON patients
+TO reporting_user;
+
+REVOKE DELETE
+ON appointments
+FROM reporting_user;
+
+
+

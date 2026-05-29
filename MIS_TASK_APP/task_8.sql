@@ -18,3 +18,7 @@ from patients as p
 left join appointments as a
 on a.patient_id=p.patient_id
 where a.appointment_id is null;
+
+
+
+
