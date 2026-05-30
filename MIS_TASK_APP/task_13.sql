@@ -36,7 +36,7 @@ as $$
 declare
      avg_duration int;
 begin
-     select avg_session_duration
+   select avg_session_duration
 	 into avg_duration
 	 from engagement_summary
 	 where patient_id=p_patient_id;
@@ -45,5 +45,8 @@ end;
 $$ language plpgsql;
 
 select avg_eng_duration(1);
+
+
+
 
 
