@@ -4,7 +4,7 @@ as $$
 begin 
     if p_status not in ('Scheduled','Completed','Cancelled')
 	then
-	    raise exception 'invalid status';
+	raise exception 'invalid status';
 	end if;
     insert into appointments( patient_id,doctor_id,appointment_date,appointment_time,status)
 	values(p_patient_id,p_doctor_id,p_appointment_date,p_appointment_time,p_status);
