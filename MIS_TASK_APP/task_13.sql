@@ -4,7 +4,7 @@ as $$
 declare
      total_cnt int;
 begin
-     select login_count
+   select login_count
 	 into total_cnt
 	 from user_engagement
 	 where patient_id=p_patient_id;
