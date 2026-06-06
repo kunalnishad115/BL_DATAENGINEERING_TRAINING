@@ -12,6 +12,7 @@ UPDATE patients
 SET city = 'Bangalore'
 WHERE patient_id = 1;
 
+
 DELETE FROM appointments
 WHERE status = 'Cancelled';
 
