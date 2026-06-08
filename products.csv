@@ -1,0 +1,51 @@
+product_id,product_name,stock
+P101,Router,30
+P102,Monitor,10
+P103,Graphics Card,77
+P104,Scanner,27
+P105,RAM,14
+P106,Router,21
+P107,Speaker,35
+P108,Scanner,19
+P109,Monitor,9
+P110,Webcam,58
+P111,SSD,95
+P112,Scanner,14
+P113,Graphics Card,48
+P114,Hard Disk,65
+P115,Tablet,92
+P116,SSD,31
+P117,Router,78
+P118,Speaker,46
+P119,Mouse,82
+P120,Graphics Card,13
+P121,Hard Disk,90
+P122,Webcam,88
+P123,Graphics Card,93
+P124,Hard Disk,19
+P125,Webcam,33
+P126,Tablet,27
+P127,Graphics Card,97
+P128,Scanner,42
+P129,Keyboard,15
+P130,Monitor,52
+P131,Tablet,82
+P132,Tablet,23
+P133,SSD,17
+P134,Webcam,17
+P135,Hard Disk,42
+P136,Router,36
+P137,Headphones,68
+P138,Tablet,91
+P139,Monitor,31
+P140,Laptop,55
+P141,Scanner,96
+P142,Keyboard,40
+P143,Printer,18
+P144,Tablet,41
+P145,Printer,87
+P146,Scanner,48
+P147,Webcam,10
+P148,SSD,20
+P149,RAM,38
+P150,Mouse,44
