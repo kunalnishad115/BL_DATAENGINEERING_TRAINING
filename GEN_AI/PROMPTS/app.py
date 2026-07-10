@@ -8,12 +8,14 @@ llm=HuggingFaceEndpoint(
 )
 
 model=ChatHuggingFace(llm=llm)
+chat_history=[]
 
 while True:
   user_input=input('Human: ')
+  chat_history.append(user_input)
   if user_input == 'exit':
     break
-  res=model.invoke(user_input)
+  res=model.invoke(chat_history)
+  chat_history.append(res.content) 
   print("AI: ",res.content)
-  
   
